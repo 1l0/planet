@@ -4,7 +4,7 @@ SEEDARG=$@
 SEED=${SEEDARG:-0.1}
 WIDTH=1080
 
-mkdir ./generated/seed-$SEED &> /dev/null
+mkdir -p ./generated/seed-$SEED &> /dev/null
 
 ./planet/planet -s $SEED -l 0.0 -po -E -O10 -c -C ./planet/default.col -w $WIDTH -h $WIDTH -o ./generated/seed-$SEED/contour-0.bmp 
 ./planet/planet -s $SEED -l 0.0 -po -c -C ./planet/default.col -z -Z ./planet/default.bio -w $WIDTH -h $WIDTH -o ./generated/seed-$SEED/biome-0.bmp
